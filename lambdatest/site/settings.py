@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 #    'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_s3_storage',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
@@ -128,3 +130,8 @@ REST_FRAMEWORK = {
 #    ]
     'UNAUTHENTICATED_USER': None
 }
+
+try:
+    from .settings_local import *
+except ImportError:
+    print("You may want to have a settings_local.py file with the S3 bucket settings for static files!")

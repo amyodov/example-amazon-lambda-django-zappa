@@ -1,4 +1,6 @@
 /node_modules/
 *nogit*
+/static/
 
 /zappa_settings.json
+/lambdatest/site/settings_local.py
