@@ -1,0 +1,4 @@
+/node_modules/
+*nogit*
+
+/zappa_settings.json
