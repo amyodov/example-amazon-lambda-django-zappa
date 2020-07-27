@@ -200,6 +200,12 @@ zappa update dev
 Left as an exercise for the reader.
 
 
+## Problems?
+
+If you have any problems with launching this deployed application,
+`zappa tail` can help you. Also, check CloudWatch logs in your AWS console.
+
+
 ---
 
 (C) 2020 Alex Myodov
