@@ -138,6 +138,26 @@ and add the following one:
 </CORSConfiguration>
 ~~~
 
+If requested to add it in JSON format, it should look this way:
+
+~~~json
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": [],
+        "MaxAgeSeconds": 3000
+    }
+]
+~~~
+
 After this, you are basically done with configuring S3. Now you need to
 teach the Django site to use it.
 
